@@ -2,7 +2,6 @@ package net.kurdsofts.practicedagger.di;
 
 import android.app.Application;
 
-import net.kurdsofts.practicedagger.ActivityBuildersModule;
 import net.kurdsofts.practicedagger.BaseApplication;
 
 import dagger.BindsInstance;
@@ -14,6 +13,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         modules = {
                 AndroidSupportInjectionModule.class,
                 ActivityBuildersModule.class,
+                AppModule.class,
         }
 )
 public interface AppComponent extends AndroidInjector<BaseApplication> {
