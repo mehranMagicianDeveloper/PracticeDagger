@@ -12,7 +12,7 @@ public class AuthViewModel extends ViewModel {
 
     @Inject
     public AuthViewModel() {
-        Log.d(TAG, "AuthViewModel: view model is working");
+        Log.d(TAG, "it is working");
     }
 
 }
