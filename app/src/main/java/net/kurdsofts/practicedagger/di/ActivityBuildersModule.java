@@ -1,6 +1,7 @@
 package net.kurdsofts.practicedagger.di;
 
-import net.kurdsofts.practicedagger.AuthActivity;
+import net.kurdsofts.practicedagger.di.auth.AuthViewModelModule;
+import net.kurdsofts.practicedagger.ui.auth.AuthActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -8,7 +9,9 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public abstract class ActivityBuildersModule {
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(
+            modules = {AuthViewModelModule.class}
+    )
     abstract AuthActivity contributeAuthActivity();
 
 }
